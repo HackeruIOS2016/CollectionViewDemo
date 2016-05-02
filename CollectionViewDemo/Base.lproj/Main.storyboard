@@ -16,13 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qhR-sy-UH6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qhR-sy-UH6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e2M-40-Xxi"/>
+                            <constraint firstAttribute="trailing" secondItem="qhR-sy-UH6" secondAttribute="trailing" id="fgM-sR-4LF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qhR-sy-UH6" secondAttribute="bottom" id="mzr-f6-C5P"/>
+                            <constraint firstItem="qhR-sy-UH6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n2q-g9-UYp"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="qhR-sy-UH6" id="NSn-mH-ETt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="410"/>
+            <point key="canvasLocation" x="1689" y="410"/>
         </scene>
         <!--Season Collection View Controller-->
         <scene sceneID="xwa-L8-aMP">
@@ -39,15 +53,29 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeasonCell" id="oeN-qg-dUe">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeasonCell" id="oeN-qg-dUe" customClass="SeasonCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
                                 <rect key="frame" x="60" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="08-August" translatesAutoresizingMaskIntoConstraints="NO" id="QtG-i9-3oi">
+                                            <rect key="frame" x="8" y="8" width="184" height="184"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.88799205801104975" green="0.20971899925032142" blue="0.28439473660776482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.94273259418982047" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="leading" secondItem="oeN-qg-dUe" secondAttribute="leading" constant="8" id="APY-Ws-mei"/>
+                                    <constraint firstAttribute="trailing" secondItem="QtG-i9-3oi" secondAttribute="trailing" constant="8" id="Knj-5S-uMW"/>
+                                    <constraint firstAttribute="bottom" secondItem="QtG-i9-3oi" secondAttribute="bottom" constant="8" id="SVY-gu-IEG"/>
+                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="top" secondItem="oeN-qg-dUe" secondAttribute="top" constant="8" id="kBT-id-2yC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="QtG-i9-3oi" id="G4D-Zo-IIH"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -58,7 +86,7 @@
                     <navigationItem key="navigationItem" id="ZI3-2P-fa5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" id="WUm-41-qia"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MasterToDetail" id="WUm-41-qia"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Si-X1-pcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,4 +113,7 @@
             <point key="canvasLocation" x="880" y="410"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="08-August" width="375" height="480"/>
+    </resources>
 </document>

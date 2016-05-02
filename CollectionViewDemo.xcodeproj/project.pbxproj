@@ -16,6 +16,7 @@
 		6D6951E11CD7281A0007970C /* SeasonPapers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6951DF1CD7281A0007970C /* SeasonPapers.xcassets */; };
 		6D6951E31CD728D60007970C /* WallPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E21CD728D60007970C /* WallPaper.swift */; };
 		6D6951E51CD729F10007970C /* SeasonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */; };
+		6D6951E71CD7450A0007970C /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6D6951DF1CD7281A0007970C /* SeasonPapers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SeasonPapers.xcassets; sourceTree = "<group>"; };
 		6D6951E21CD728D60007970C /* WallPaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallPaper.swift; sourceTree = "<group>"; };
 		6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewController.swift; sourceTree = "<group>"; };
+		6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
 				6D6951CC1CD728060007970C /* AppDelegate.swift */,
+				6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */,
 				6D6951CE1CD728060007970C /* ViewController.swift */,
 				6D6951D01CD728060007970C /* Main.storyboard */,
 				6D6951DE1CD7281A0007970C /* SeasonDataSource.swift */,
@@ -153,6 +156,7 @@
 				6D6951E31CD728D60007970C /* WallPaper.swift in Sources */,
 				6D6951E51CD729F10007970C /* SeasonCollectionViewController.swift in Sources */,
 				6D6951CD1CD728060007970C /* AppDelegate.swift in Sources */,
+				6D6951E71CD7450A0007970C /* SeasonCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

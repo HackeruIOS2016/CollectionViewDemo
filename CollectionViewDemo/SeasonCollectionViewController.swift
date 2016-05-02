@@ -11,6 +11,7 @@ import UIKit
 
 class SeasonCollectionViewController: UICollectionViewController {
 
+    let dataSource = DataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,22 +34,28 @@ class SeasonCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
     }
+ 
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let row = indexPath.row
+        let paper = dataSource.arr[row]
+        
+        performSegueWithIdentifier("MasterToDetail", sender: paper)
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        let dest = segue.destinationViewController as! ViewController
+        
+        dest.data = sender as? WallPaper
     }
-    */
+   
 
     // MARK: UICollectionViewDataSource
 
@@ -60,11 +67,14 @@ class SeasonCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 12
+        return dataSource.arr.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SeasonCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SeasonCell", forIndexPath: indexPath) as! SeasonCollectionViewCell
+        
+        let paper = dataSource.arr[indexPath.row]
+        cell.data = paper
     
         // Configure the cell
     
