@@ -13,7 +13,9 @@ class SeasonCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        initLayout()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
  
@@ -21,6 +23,18 @@ class SeasonCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    func initLayout(){
+        let layout = self.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        let cellWidth = collectionView!.frame.size.width / 2 - 8
+        
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
+        
+        layout.minimumLineSpacing = 8
+        layout.minimumInteritemSpacing = 8
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

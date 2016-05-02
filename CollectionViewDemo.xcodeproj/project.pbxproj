@@ -62,6 +62,7 @@
 		6D6951CB1CD728060007970C /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
 				6D6951CC1CD728060007970C /* AppDelegate.swift */,
 				6D6951CE1CD728060007970C /* ViewController.swift */,
 				6D6951D01CD728060007970C /* Main.storyboard */,
@@ -71,7 +72,6 @@
 				6D6951D31CD728060007970C /* Assets.xcassets */,
 				6D6951D51CD728060007970C /* LaunchScreen.storyboard */,
 				6D6951D81CD728060007970C /* Info.plist */,
-				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
 			);
 			path = CollectionViewDemo;
 			sourceTree = "<group>";
