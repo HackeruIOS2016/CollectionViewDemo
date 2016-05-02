@@ -64,19 +64,75 @@
 		6D6951CB1CD728060007970C /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				6D6951DE1CD7281A0007970C /* SeasonDataSource.swift */,
-				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
-				6D6951CC1CD728060007970C /* AppDelegate.swift */,
-				6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */,
-				6D6951CE1CD728060007970C /* ViewController.swift */,
-				6D6951D01CD728060007970C /* Main.storyboard */,
-				6D6951E21CD728D60007970C /* WallPaper.swift */,
-				6D6951DF1CD7281A0007970C /* SeasonPapers.xcassets */,
-				6D6951D31CD728060007970C /* Assets.xcassets */,
-				6D6951D51CD728060007970C /* LaunchScreen.storyboard */,
-				6D6951D81CD728060007970C /* Info.plist */,
+				6D6951E81CD75D510007970C /* Controllers */,
+				6D6951EE1CD75DC00007970C /* Resources */,
+				6D6951ED1CD75DB10007970C /* Layout */,
+				6D6951EC1CD75DA10007970C /* Models */,
+				6D6951EB1CD75D8E0007970C /* Configuration */,
+				6D6951EA1CD75D7F0007970C /* Views */,
+				6D6951E91CD75D710007970C /* DataSources */,
 			);
 			path = CollectionViewDemo;
+			sourceTree = "<group>";
+		};
+		6D6951E81CD75D510007970C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
+				6D6951CE1CD728060007970C /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6D6951E91CD75D710007970C /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951DE1CD7281A0007970C /* SeasonDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		6D6951EA1CD75D7F0007970C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6D6951EB1CD75D8E0007970C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951CC1CD728060007970C /* AppDelegate.swift */,
+				6D6951D81CD728060007970C /* Info.plist */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		6D6951EC1CD75DA10007970C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951E21CD728D60007970C /* WallPaper.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		6D6951ED1CD75DB10007970C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951D01CD728060007970C /* Main.storyboard */,
+				6D6951D51CD728060007970C /* LaunchScreen.storyboard */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		6D6951EE1CD75DC00007970C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D6951DF1CD7281A0007970C /* SeasonPapers.xcassets */,
+				6D6951D31CD728060007970C /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

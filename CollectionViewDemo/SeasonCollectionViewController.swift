@@ -12,6 +12,7 @@ import UIKit
 class SeasonCollectionViewController: UICollectionViewController {
 
     let dataSource = DataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +40,9 @@ class SeasonCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         let row = indexPath.row
-        let paper = dataSource.arr[row]
+        let section = indexPath.section
+        
+        let paper = dataSource.data[section]![row]
         
         performSegueWithIdentifier("MasterToDetail", sender: paper)
     }
@@ -61,19 +64,22 @@ class SeasonCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return dataSource.data.count
     }
-
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return dataSource.arr.count
+        return dataSource.data[section]!.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SeasonCell", forIndexPath: indexPath) as! SeasonCollectionViewCell
         
-        let paper = dataSource.arr[indexPath.row]
+        let row = indexPath.row
+        let section = indexPath.section
+        
+        
+        let paper = dataSource.data[section]![row]
         cell.data = paper
     
         // Configure the cell
