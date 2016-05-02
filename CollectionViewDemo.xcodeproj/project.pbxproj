@@ -17,6 +17,8 @@
 		6D6951E31CD728D60007970C /* WallPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E21CD728D60007970C /* WallPaper.swift */; };
 		6D6951E51CD729F10007970C /* SeasonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */; };
 		6D6951E71CD7450A0007970C /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */; };
+		6D6951F01CD763450007970C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951EF1CD763450007970C /* HeaderView.swift */; };
+		6D6951F21CD767390007970C /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6951F11CD767390007970C /* Season.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		6D6951E21CD728D60007970C /* WallPaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallPaper.swift; sourceTree = "<group>"; };
 		6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewController.swift; sourceTree = "<group>"; };
 		6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
+		6D6951EF1CD763450007970C /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		6D6951F11CD767390007970C /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */,
+				6D6951EF1CD763450007970C /* HeaderView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6D6951E21CD728D60007970C /* WallPaper.swift */,
+				6D6951F11CD767390007970C /* Season.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -207,12 +213,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6951F21CD767390007970C /* Season.swift in Sources */,
 				6D6951CF1CD728060007970C /* ViewController.swift in Sources */,
 				6D6951E01CD7281A0007970C /* SeasonDataSource.swift in Sources */,
 				6D6951E31CD728D60007970C /* WallPaper.swift in Sources */,
 				6D6951E51CD729F10007970C /* SeasonCollectionViewController.swift in Sources */,
 				6D6951CD1CD728060007970C /* AppDelegate.swift in Sources */,
 				6D6951E71CD7450A0007970C /* SeasonCollectionViewCell.swift in Sources */,
+				6D6951F01CD763450007970C /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

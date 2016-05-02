@@ -8,15 +8,23 @@
 
 import UIKit
 
+
 class DataSource {
 
 var data: [Int:[WallPaper]]
     
  var arr = [WallPaper]()
-    
+ var seasons = [Season]()
     
     
     init (){
+        
+        let fall = Season(image: "Fall", title: "Fall")
+        let spring = Season(image: "Spring", title: "Spring")
+        let winter = Season(image: "Winter", title: "Winter")
+        let summer = Season(image: "Summer", title: "Summer")
+        
+        seasons += [winter, spring, summer, fall]
         
         
         let dec = WallPaper(title: "December", subTitle: "Winter", image: "12-December")

@@ -18,6 +18,7 @@ class SeasonCollectionViewController: UICollectionViewController {
         
         initLayout()
         
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
  
@@ -87,6 +88,21 @@ class SeasonCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    
+    
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        //dequeue the header & cast to appropriate type
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SeasonHeader", forIndexPath: indexPath) as! HeaderView
+        
+        //grab the season from the data source
+        let season = dataSource.seasons[indexPath.section]
+        //customise the header
+        header.data = season.image
+        
+        print(kind)
+        return header
+    }
     // MARK: UICollectionViewDelegate
 
     /*

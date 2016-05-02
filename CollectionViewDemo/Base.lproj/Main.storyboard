@@ -49,13 +49,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PE0-F4-arA">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="58" height="150"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeasonCell" id="oeN-qg-dUe" customClass="SeasonCollectionViewCell" customModule="CollectionViewDemo" customModuleProvider="target">
-                                <rect key="frame" x="60" y="64" width="200" height="200"/>
+                                <rect key="frame" x="60" y="214" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -118,6 +118,24 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeasonHeader" id="JcS-HA-Xgn" customClass="HeaderView" customModule="CollectionViewDemo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="320" height="150"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winter" translatesAutoresizingMaskIntoConstraints="NO" id="SPD-es-dRB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="SPD-es-dRB" secondAttribute="trailing" id="AYZ-x2-Fdj"/>
+                                <constraint firstItem="SPD-es-dRB" firstAttribute="top" secondItem="JcS-HA-Xgn" secondAttribute="top" id="FUe-d5-Px3"/>
+                                <constraint firstAttribute="bottom" secondItem="SPD-es-dRB" secondAttribute="bottom" id="N1s-jL-3WZ"/>
+                                <constraint firstItem="SPD-es-dRB" firstAttribute="leading" secondItem="JcS-HA-Xgn" secondAttribute="leading" id="rRL-wf-zfu"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="imageView" destination="SPD-es-dRB" id="ecK-As-LDq"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="TLC-L2-rgq" id="p4v-gy-XQ6"/>
                             <outlet property="delegate" destination="TLC-L2-rgq" id="xfl-3C-P7R"/>
@@ -155,5 +173,6 @@
     </scenes>
     <resources>
         <image name="08-August" width="375" height="480"/>
+        <image name="Winter" width="50" height="50"/>
     </resources>
 </document>
