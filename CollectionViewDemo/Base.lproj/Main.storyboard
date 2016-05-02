@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -63,18 +64,57 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="08-August" translatesAutoresizingMaskIntoConstraints="NO" id="QtG-i9-3oi">
                                             <rect key="frame" x="8" y="8" width="184" height="184"/>
                                         </imageView>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-9s-BEF">
+                                            <rect key="frame" x="8" y="167" width="184" height="33"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PHR-ek-Xah">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RbJ-e2-hGv">
+                                                        <rect key="frame" x="0.0" y="-165" width="0.0" height="0.0"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="c26-Es-IeS">
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </view>
+                                                        <vibrancyEffect>
+                                                            <blurEffect style="light"/>
+                                                        </vibrancyEffect>
+                                                    </visualEffectView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-q5-XWz">
+                                                        <rect key="frame" x="71" y="6" width="42" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="6SN-q5-XWz" firstAttribute="centerY" secondItem="PHR-ek-Xah" secondAttribute="centerY" id="Rtl-ad-j6L"/>
+                                                    <constraint firstItem="6SN-q5-XWz" firstAttribute="centerX" secondItem="PHR-ek-Xah" secondAttribute="centerX" id="SAr-Nq-LeD"/>
+                                                </constraints>
+                                            </view>
+                                            <color key="tintColor" white="0.40318287037037037" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ns4-9s-BEF" secondAttribute="height" multiplier="96:17" id="oWq-gC-qf6"/>
+                                            </constraints>
+                                            <vibrancyEffect>
+                                                <blurEffect style="dark"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.94273259418982047" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="leading" secondItem="oeN-qg-dUe" secondAttribute="leading" constant="8" id="APY-Ws-mei"/>
-                                    <constraint firstAttribute="trailing" secondItem="QtG-i9-3oi" secondAttribute="trailing" constant="8" id="Knj-5S-uMW"/>
-                                    <constraint firstAttribute="bottom" secondItem="QtG-i9-3oi" secondAttribute="bottom" constant="8" id="SVY-gu-IEG"/>
-                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="top" secondItem="oeN-qg-dUe" secondAttribute="top" constant="8" id="kBT-id-2yC"/>
+                                    <constraint firstAttribute="trailing" secondItem="QtG-i9-3oi" secondAttribute="trailing" constant="8" id="0vT-z8-hCU"/>
+                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="top" secondItem="oeN-qg-dUe" secondAttribute="top" constant="8" id="3xM-9r-IXh"/>
+                                    <constraint firstItem="Ns4-9s-BEF" firstAttribute="leading" secondItem="oeN-qg-dUe" secondAttribute="leading" constant="8" id="EbZ-Kd-mrg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ns4-9s-BEF" secondAttribute="bottom" id="VLz-w3-cF7"/>
+                                    <constraint firstItem="QtG-i9-3oi" firstAttribute="leading" secondItem="oeN-qg-dUe" secondAttribute="leading" constant="8" id="W3R-dP-IFB"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ns4-9s-BEF" secondAttribute="trailing" constant="8" id="dQm-Fu-O4m"/>
+                                    <constraint firstAttribute="bottom" secondItem="QtG-i9-3oi" secondAttribute="bottom" constant="8" id="vyp-2K-d5t"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="QtG-i9-3oi" id="G4D-Zo-IIH"/>
+                                    <outlet property="titleLabel" destination="6SN-q5-XWz" id="fjT-FR-Ba4"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

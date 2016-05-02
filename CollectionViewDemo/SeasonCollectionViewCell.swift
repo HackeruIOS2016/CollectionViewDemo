@@ -10,11 +10,15 @@ import UIKit
 
 class SeasonCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     @IBOutlet weak var imageView: UIImageView!
     
     var data:WallPaper?{
         didSet{
             imageView.image = data?.image
+            titleLabel.text = data?.title
         }
     }
     

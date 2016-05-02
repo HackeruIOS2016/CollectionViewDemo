@@ -64,12 +64,12 @@
 		6D6951CB1CD728060007970C /* CollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6D6951DE1CD7281A0007970C /* SeasonDataSource.swift */,
 				6D6951E41CD729F10007970C /* SeasonCollectionViewController.swift */,
 				6D6951CC1CD728060007970C /* AppDelegate.swift */,
 				6D6951E61CD7450A0007970C /* SeasonCollectionViewCell.swift */,
 				6D6951CE1CD728060007970C /* ViewController.swift */,
 				6D6951D01CD728060007970C /* Main.storyboard */,
-				6D6951DE1CD7281A0007970C /* SeasonDataSource.swift */,
 				6D6951E21CD728D60007970C /* WallPaper.swift */,
 				6D6951DF1CD7281A0007970C /* SeasonPapers.xcassets */,
 				6D6951D31CD728060007970C /* Assets.xcassets */,
